@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+
+<br>
+<center>
+<div class="card mb-3" style="max-width: 800px;">
+  <div class="row g-0">
+    <div class="col-md-4" style="background-color: #3a4468; padding: 40px; border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;">
+      <div class="_3oBhRa col col-2-5 _4H6HH5" style="color: white;">
+        <h4 style="text-align: left;">
+          Looks like you're new here!
+        </h4>         
+        <p class="_1-pxlW" style="padding-top: 30px; padding-right: 25px;">
+          <span>
+          Sign up with your  mobile number to get started
+          </span>
+        </p>
+      </div>
+      <div>
+      <img src="{%static 'imag/login_img_c4a81e.png' %}" style="padding-top: 120px; width: 200px;" alt="">
+      </div>
+    </div>
+
+    <div class="col-md-8">      
+      <div class="_36HLxm col col-3-5"> 
+        <form method="POST" action="/reistration" style="padding-left: 50px; padding-right: 50px; padding-top: 60px; padding-bottom: 25px;">
+            {% csrf_token %}
+            <div class="IiD88i _351hSN">
+             <input placeholder="Enter Name" type="text" value="" name="name" style="border: none; outline: none; border-bottom: 1px solid #e0e0e0; padding: 8px 10px 10px 0; width: 100%;">
+            </div><br>
+            <div class="IiD88i _351hSN">
+              <input placeholder="Enter Email" type="text" value="" name="email" style="border: none; outline: none; border-bottom: 1px solid #e0e0e0; padding: 8px 10px 10px 0; width: 100%;">
+             </div><br>
+             <div class="IiD88i _351hSN">
+              <input placeholder="Mobile number" type="number" name="mobile" value="" style="border: none; outline: none; border-bottom: 1px solid #e0e0e0; padding: 8px 10px 10px 0; width: 100%;">
+             </div><br>
+             <div class="IiD88i _351hSN">
+              <input placeholder="Enter Password" type="number" name="password" value="" style="outline: none; border: none; border-bottom: 1px solid #e0e0e0; padding: 8px 10px 10px 0; width: 100%; background: #fff;">
+            </div>
+            {% comment %} <div class="IiD88i _351hSN">
+              <input  placeholder="Enter Password" type="number" value="" style="border: none; outline: none; border-bottom: 1px solid #e0e0e0; padding: 8px 10px 10px 0; width: 100%; background: #fff;">
+            </div> {% endcomment %}
+            <div class="_1Ijv5h" style="color:#878787; font-size: 12px; padding-top: 40px; padding-bottom: 20px;">
+              By continuing, you agree to Flipkart's 
+              <a class="_2ARnXM" target="_blank" href="/pages/terms">
+                Terms of Use
+              </a>
+               and
+              <a class="_2ARnXM" target="_blank" href="/pages/privacypolicy">
+                Privacy Policy
+              </a>.
+            </div>
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <button class="btn btn-primary" type="submit">Sign Up</button>
+                <div>OR</div>
+                <button class="btn btn-light" style="box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%)" type=""><a class="_14Me7y" href="{% url 'login' %}">Existing User? Log in</a></button>
+            </div>
+              
+        </form>
+      </div>       
+      {% comment %} <input required type="number" class="form-control" placeholder="Phone Number" name='phone' style="margin-bottom: 15px;"><hr>
+      <input type="password" class="form-control" placeholder="Enter password" id="inputPassword"><hr> {% endcomment %}
+    </div>
+  </div>
+</div>
+</center>
+
+  
+ {% endblock %} 
+  

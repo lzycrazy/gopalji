@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %} 
+  <!-- about section -->
+<br>
+  <section class="about_section">
+    <div class="container-fluid  ">
+      {% for j in about %}
+      <div class="row">
+        <div class="col-md-5 ml-auto" style="padding">
+          <div class="detail-box pr-md-3">
+            <div class="heading_container">
+              <h2>
+                {{j.title}}
+              </h2>
+            </div>
+            <p>
+              {{j.content}}
+            </p>
+            <a href="">
+              Read More
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6 px-0">
+          <div class="img-box">
+            <img src="{{j.photo.url}}" alt="">
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  <br>
+
+  <!-- end about section -->
+
+ 
+  {% endblock %}
